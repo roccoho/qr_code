@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/qr_code.css') }}">
+</head>
+<body>
+    <p id="error">{{error}}</p>
+    <form id="img_form" method="post" action="{{url_for('result')}}" enctype="multipart/form-data" autocomplete="off"> 
+        <span>QR image url:</span>
+        <input type="text" id="qr_img_url" name="qr_img_url"/> 
+        <input type="submit" value="Submit">
+    <p>or</p>
+    <p>"ctrl + v" or "windows + v" to paste image from clipboard</p>
+    <p>or</p>
+    <div id="drop_zone" 
+        ondrop="dropHandler(event);" 
+        ondragover="dragOverHandler(event);" 
+        ondragenter="dragEnterHandler(event);" 
+        ondragleave="dragLeaveHandler(event);"
+        onclick="clickHandler(event);">  
+        <input type="file" id="qr_file" name="qr_file" accept="image/*" style="display:none;"/>  
+        <p>upload QR image</p>  
+        <p>or</p>   
+        <p>drag and drop the QR image</p>
+    </div>
+    <div id="source_code">
+        <a id="source_code" href="https://github.com/roccoho/qr_code" target="_blank">Source code</a>
+    </div>
+    </form>
+</body>
+<script src="{{url_for('static', filename='js/qr_code.js')}}"></script>
+</html>

@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(54,54,54);
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    /* height: 100%; */
+}
+
+a:visited {
+    color: rgb(39, 247, 20);
+}
+
+a:link {
+    color: rgb(144, 142, 255);
+  }  
+   
+a:hover {
+    cursor: pointer;
+    color: hotpink;
+}
+   
+a:active {
+    color: rgb(0, 200, 255);
+}
+
+#error{
+    color: red;
+}
+
+#drop_zone {
+    display: table-cell;
+    vertical-align: middle;
+    border: 3px solid rgb(63, 76, 87);
+    width: 50vw;
+    height: 40vh;
+  }
+
+#drop_zone:hover { 
+    background-color: rgb(122, 136, 148, 128);
+    cursor: pointer;
+} 
+
+#source_code{
+    padding-top: 30%;
+}
+ 
+#source_code > a:link, a:visited{
+    color: rgb(122, 136, 148);
+}
+
+#source_code > a:active, a:hover{
+    color: white;
+}
